@@ -1,0 +1,25 @@
+数据类型
+	js是一种弱类型或者说动态语言。意味着不用提前声明变量类型，在程序运行过程中，类型会根据等号右边的值确定的。
+	js拥有动态类型，同时也意味着相同的变量可用作不同的类型。
+	简单数据类型（Number,String,Boolean,Undefined Null）
+		Number（可以包括整数和小数）
+			程序中变量值0开头的就是8进制
+			程序中变量值0x开头的就是16进制
+			数字范围
+				Number.MAX_VALUE
+				Number.MIN_VALUE
+			特殊值
+				Infinity	无穷大
+				-Infinity	负无穷大
+				NaN			非数值
+			isNaN
+				用来判断是否是非数字
+				是就返回true,不是就是false
+		String
+			单引号和双引号都可
+			遇到字符串嵌套的情况就使用外双内单或者外单内双
+			检测字符串长度length属性
+		Boolean
+		Undefined:var a;声明了变量但是没有给值，此时a=undefined
+		Null:var a = null;声明了变量a为空值
+	复杂属性类型（object）
