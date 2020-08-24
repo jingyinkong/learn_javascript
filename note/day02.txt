@@ -19,7 +19,33 @@
 			单引号和双引号都可
 			遇到字符串嵌套的情况就使用外双内单或者外单内双
 			检测字符串长度length属性
+			字符串拼接：字符串 + 任何类型 = 拼接后的新字符串，和变量相连与python同
 		Boolean
-		Undefined:var a;声明了变量但是没有给值，此时a=undefined
-		Null:var a = null;声明了变量a为空值
+			参与加法运算的，true是1，false是0
+		Undefined:var a;
+			声明了变量但是没有给值，此时a=undefined
+			注意：未定义数据类型（undefined）与字符串相加，得到的是undefined字符串
+				未定义数据类型（undefined）与Number数据类型相加，得到的是NaN
+		Null:var a = null;
+			声明了变量a为空值
+			注意：空值（null）与字符串相加，得到的是null字符串
+				空值（null）与Number数据类型相加，得到的是Number
+	typeof
+		检测变量的数据类型
+		书写形式： typeof 变量名，或者typeof(变量名)
 	复杂属性类型（object）
+数据类型转换
+	转换为字符串类型
+		1、num.toString();
+		2、String(num);
+		3、num + "字符串"
+	转换为数字型
+		1、parseInt(string);
+			巧用可以将单位去掉
+			parseInt("120px"); 输出结果是120
+		2、pardeFloat(string);
+		3、Number(string);
+		4、利用算数运算隐式转换，'12'- 0
+	转换为布尔型
+		Boolean();
+		只有'',0,NaN,null,undefined这五个数是false，其余的都是true

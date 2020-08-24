@@ -35,7 +35,7 @@ JavaScript书写位置
 输入输出语句
 	1、alert(msg)		弹出警示框
 	2、console.log(msg)	打印输出信息
-	3、prompt(info)		弹出输入框
+	3、prompt(info)		弹出输入框(取到的值是string类型)
 
 变量 
 	var xxx;
