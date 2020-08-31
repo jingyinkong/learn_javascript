@@ -1,4 +1,6 @@
-var a = 1;
-var b = 1;
-console.log(0 && 777);
-// alert(a.length);
+function test() {
+    console.log(arguments);
+    console.log(arguments.length);
+}
+
+test(1, 2, 3, 4, 5);

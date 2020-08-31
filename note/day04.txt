@@ -1,0 +1,33 @@
+1、利用new创建数组，var arr = new Array();
+2、数组新增元素，(1)修改length大小。(2)修改索引号。
+3、筛选数组的方式
+	for (var i = 0; i<arr.length; i++){
+		if (arr[i] >= 10){
+			newArr[newArr.length] = arr[i];
+		}
+	}
+4、冒泡排序
+	for (var i = 0; i < arr.length; i++){
+		for(var j = 0; j < arr.length - j; j++){
+			if  (arr[j] > arr[j + 1]){
+				var tamp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+5、函数声明
+	1、function 函数名(){
+		}
+	2、var fun = function(){
+		}
+		调用的时候调用fun();
+6、js允许函数的形参和实参不一致
+	但是如果实参的个数是小于形参的个数，多余的形参定义为undefined,最终的结果可能会变成NaN。
+7、函数没有return的话，返回值是undefined
+8、arguments存储了所有的实参
+	arguments展示形式是一个伪数组形式，因此可以遍历。
+	伪数组:
+		具有length属性;
+		按照索引形式存储数据;
+		不具有pop，push等方法;
