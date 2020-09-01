@@ -1,0 +1,84 @@
+作用域
+	全局作用域：script标签内部。
+	局部作用域：函数内部。
+	js在es6中新增了块级作用域
+	
+	根据内部函数可以访问外部函数变量的机制，用链式查找那些数据能被内部函数访问，就称为作用域链。
+JavaScript预解析
+	javaScript是由浏览器中的javaScript解析器来执行的。javaScript解析器在运行javaScript代码的时候分两步：预解析和代码执行。
+		预解析：js引擎会把js里面所有的var和function提升到当前作用域的最前面。
+			变量预解析（变量提升）
+				把所有的变量声明提升到当前作用域最前面，但是并不提升负值操作。
+			函数预解析（函数提升）
+		代码执行：按照代码的书写顺序从上往下执行。
+		例1：
+			var a = 19;
+			f1();
+			function f1(){
+				var b = 9;
+				console.log(a);
+				console.log(b);
+				var a = '123';
+			}
+			//相当于以下代码
+			var a;
+			function f1(){
+				var a, b;
+				b = 9;
+				console.log(a);
+				console.log(b);
+				a = '123';
+			}
+			输出结果是undefined,9。
+		例2：
+			f1();
+			console.log(c);
+			console.log(b);
+			console.log(a);
+			function f1(){
+				var a = b = c = 9;
+				console.log(a);
+				console.log(b);
+				console.log(c);
+			}
+			//相当于以下代码
+			function f1(){
+				var a;			//相当于 var a = 9; b = 9; c = 9; b和c直接赋值，没有声明，相当于全局变量。
+				a = b = c = 9;
+				console.log(a);
+				console.log(b);
+				console.log(c);
+			}
+			f1()
+			console.log(c);
+			console.log(b);
+			console.log(a);
+对象
+	创建对象的方法：
+	1、var obj = {
+			name:'AAAAA',
+			age:18,
+			sex:'男'，
+			sayHi: function(){
+				console.log();
+			}
+		};
+		属性和方法采用键值对的形式，中间用，隔开。
+	2、var obj = new Object();
+	   obj.name = 'AAAAA';
+	   obj.age = 18;
+	   obj.sex = '男';
+	   obj.sayHi = function(){
+				console.log();
+		}
+	3、function Man(name, age, sex){
+		this.name = 'aaaaa';
+		this.sayHi = function(){
+				console.log();
+			}
+		}
+		var man = new Man();
+		构造函数的首字母要大写。不需要return;
+	调用对象的方法
+		1、对象名.属性名
+		2、对象名['属性名']
