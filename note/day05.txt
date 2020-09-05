@@ -82,3 +82,8 @@ JavaScript预解析
 	调用对象的方法
 		1、对象名.属性名
 		2、对象名['属性名']
+	变量属性值
+		for (var k in obj) {
+			console.log(k);
+			console.log(obj[k]);
+		}

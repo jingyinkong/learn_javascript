@@ -1,0 +1,25 @@
+内置对象
+	Math
+		Math.PI				π
+		Math.max(1,2)		最大值
+		Math.floor()		向下取整
+		Math.ceil()			向上取整
+		Math.round()		四舍五入
+		Math.abs()			绝对值
+		Math.max()/min()	最大最小值
+		自己封装一个最大值函数
+		var max = arguments[0];
+		for (var i = 0; i < arguments.length; i++){
+			if (max < arguments[i]){
+				max = arguments[i];
+			}
+		}
+		return max;
+		Math.random()		随机的小数
+		function getRendom(max, min){	两个数之间的随机整数
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+	Date
+		var date = new Date();
+		获取年月日时分秒
+		get年月日时分秒()
