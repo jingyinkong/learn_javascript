@@ -1,0 +1,48 @@
+数组对象
+	创建数组的方式
+		1、利用数组字面量
+			var arr = [1,2,3];
+		2、利用new Array();
+			var arr = new Array(2);
+			代表创建了一个数组，2表示长度为2，里面有两个空元素。
+			var arr = new Array(2,3);
+			等价于[2,3]
+	
+	检测是否为数组
+		1、arr instanceof Array运算符
+		2、Array.isArray(参数)	H5新增方法 i9以上支持
+	
+	添加和删除元素
+		1、arr.push() 在数组的末尾添加一个或者多个数组元素。
+			参数直接写数组元素就行。
+			返回的结果是新数组的长度。
+			原数组也会发生变化。
+		2、arr.unshift() 在数组的开头添加一个或者多个数组元素。
+			和push特性一样
+		3、arr.pop() 删除最后一个元素，一次只能删除一个
+			返回值是删除的元素
+		4、arr.shift() 删除第一个元素，一次只能删除一个
+			和pop特性一样
+	
+	数组排序
+		1、reverse() 翻转数组
+			arr.reverse();
+		2、sort() 冒泡排序数组
+			sort排序固定写法
+			arr.sort(function(a, b){
+				return a - b;
+			})
+		
+	数组索引
+		1、indexOf(数组元素) 	返回索引号	正序查找
+			找不到元素返回-1
+		2、lastIndexOf()		返回索引号	倒序查找
+		
+	数组转字符串
+		1、toString();
+		2、join(分割符)
+		
+	其他
+		1、concat()  	连接两个或多个数组，返回一个新数组
+		2、slice() 		数组截取slice(开始，结束)，返回被截取的数组
+		3、splice()		数组多个元素删除splice(从第几个开始，要删除的个数)，返回新数组。
