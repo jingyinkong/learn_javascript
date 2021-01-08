@@ -1,0 +1,18 @@
+JavaScript的组成
+	1、ECMAScript-JavaScript语法			->JavaScript基础
+	2、DOM-页面文档对象模型				->Web APIs
+	3、BOM-浏览器对象模型					->Web APIs
+
+DOM (Document Object Model)	W3C组织推荐的接口
+
+DOM树
+	文档：一个页面就是一个文档，DOM中使用document表示
+	元素：页面中所有标签都是元素，DOM中使用element表示
+	节点：网页中的所有内容都是节点（标签、属性、文本、注释等），DOM中使用node表示
+	（DOM把以上内容都可以看做对象）
+
+DOM获取元素
+	1、根据ID获取
+	2、根据标签名获取
+	3、通过HTML5新增的方法获取
+	4、特殊元素获取

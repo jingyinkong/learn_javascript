@@ -1,0 +1,62 @@
+事件基础
+	触发--响应的机制
+	事件是由三部分组成：
+		事件源				事件被触发的对象
+		事件类型				如何触发 什么事件 比如鼠标点击，还是鼠标经过，还是键盘按下
+		事件处理程序			通过一个函数赋值的方式完成
+	eg:
+		<button id="btn">唐伯虎</button>
+		<script>
+			var btn = document.getElementById('btn');
+			btn.onclick = function(){
+				alert('点秋香')
+			}
+		</script>
+	1、获取事件源
+	2、注册事件（绑定事件）
+	3、添加事件处理程序（采取函数赋值形式）
+
+	鼠标事件
+	onclick				鼠标点击左键触发
+	onmouseover			鼠标经过触发
+	onmouseout			鼠标离开触发
+	onfocus				获取鼠标焦点触发（就是鼠标在输入框中的光标）
+	onblur				失去鼠标焦点触发
+	onmousemove			鼠标移动触发
+	onmouseup			鼠标弹起触发
+	onmousedown			鼠标按下触发
+
+操作元素
+	改变元素内容
+	（以下内容是属性，需要直接赋值修改）
+	（这两个属性是可读写的）
+	element.innerText	改变除标签以外的内容，同时空格和换行也会去掉
+						不识别HTML标签
+	element.innerHTML	改变全部内容（包括标签），同时保留空格和换行			（常用！！！）
+
+	常用元素属性操作
+	img：
+		src、href、id、alt、title等等
+	元素的属性赋值
+
+	表单属性操作
+	表单里面的文字内容是通过value修改的
+	如果某个表单被禁用 不能再点击 使用disabled属性
+	eg:
+		btn.onclick = function() {
+			this.disabled = true;
+			//this 指向的是事件函数的调用者
+		}
+	
+	显示密码的实现
+		点击眼镜按钮，把密码框类型改为文本框就可以看到里面的密码了
+
+	样式属性操作
+	element.style.样式（需要采用驼峰命名法的变量）（修改样式比较少） 修改后采取的是行内样式
+	仿淘宝二维码点×关闭
+		btn.onclick = function() {
+			box.style.display = 'none';
+		}
+
+	element.className（修改样式比较多）（触发后更改类名，进行的是赋值操作，原来的类名会消失）（以便于更改样式）
+	如果想要保留原先的类名，直接+= "类名"就可以了。 如果CSS样式冲突，会按照CSS的原则进行，近着优先
