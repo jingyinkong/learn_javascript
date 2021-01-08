@@ -5,12 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../js/my.js">
-    </script>
+    <!--<script src="../js/my.js"></script>-->
+    <style>
+        div {
+            width: 300px;
+            height: 50px;
+            line-height: 30px;
+            color: #143;
+            background-color: pink;
+        }
+    </style>
 </head>
 
 <body>
-
+    <button>显示当前系统时间</button>
+    <div>时间</div>
+    <script>
+        var btn = document.querySelector('button');
+        var divEle = document.querySelector('div');
+        btn.onclick = function() {
+            var date = new Date;
+            divEle.innerText = date.getDate();
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="#" alt="">
+    <div>上午好</div>
+    <script>
+        var getDate = function(){
+            return '今天是北京时间' + date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDate() + '日';
+        }
+        var divele = document.querySelector('div');
+        var date = new Date();
+        var hours = date.getHours();
+        console.log(hours);
+        if (hours < 12) {
+            divele.innerHTML = '上午好' + getDate();
+        }
+        else if (hours >= 12 && hours < 3) {
+            divele.innerHTML = '中午好' + getDate();
+        }
+        else if (hours > 3) {
+            divele.innerHTML = '下午好' + getDate();
+        }
+
+        console.log(getDate());
+    </script>
+</body>
+</html>
